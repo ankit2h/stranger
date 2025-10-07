@@ -34,7 +34,7 @@ export default function useAskModel() {
       return;
     }
     try {
-      const res = await fetch("https://fastapi-app-245577333791.us-central1.run.app/ask", {
+      const res = await fetch("https://fastapi-245577333791.us-central1.run.app/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query, userid }),
