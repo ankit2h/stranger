@@ -52,7 +52,7 @@ export default function useContextSender() {
         userid, // include userid in payload
       };
       console.log("Sending context payload:", payload);
-      const res = await fetch("https://fastapi-245577333791.us-central1.run.app/context", {
+      const res = await fetch("https://response-245577333791.us-central1.run.app/context", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
