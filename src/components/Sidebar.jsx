@@ -94,7 +94,8 @@ const Sidebar = ({ onClose }) => {
 
       {/* Menu */}
       <ul className="space-y-2 px-2 flex-1 justify-center items-center">
-        <div
+        <Link
+          to={`https://preview.learnest.tech`}
           className="px-4 py-2 mb-7 w-40 rounded-lg bg-gradient-to-r from-[#232326] to-[#18181b] cursor-pointer transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm mx-auto"
           style={{
             boxShadow: "0 0 8px #6366f1, 0 0 16px #6366f1, 0 0 24px #6366f1", // indigo-500
@@ -109,7 +110,7 @@ const Sidebar = ({ onClose }) => {
           }}
         >
           Preview
-        </div>
+        </Link>
         <div></div>
         {menuItems.map((item) => (
           <li key={item.name}>
@@ -154,9 +155,7 @@ const Sidebar = ({ onClose }) => {
                 </ul>
               </div>
             ) : (
-              <Link
-                to={`/${item.name}.html`.replace(/\s+/g, "-")}
-              >
+              <Link to={`/${item.name}.html`.replace(/\s+/g, "-")}>
                 <div className="px-5 py-2 rounded-lg cursor-pointer text-gray-200 font-medium transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm">
                   {item.name}
                 </div>

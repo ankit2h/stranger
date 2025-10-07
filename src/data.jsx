@@ -1,5 +1,9 @@
 import React from "react";
 import SidebarTree from "./structure";
+import { setSidebar } from "./redux/sideSlice";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+
 
 const projectData = [
   {
@@ -106,6 +110,11 @@ const projectData = [
 ];
 
 export default function Data() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setSidebar(false));
+  }, [dispatch]);
   return (
     <div className="flex pt-24 justify-center items-center min-h-screen">
       <SidebarTree data={projectData} />

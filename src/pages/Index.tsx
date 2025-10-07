@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import usePage from "../hooks/usePage";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { setOpen, setQuery, setResponse, setTags } from "../redux/sideSlice";
+import { setOpen, setQuery, setResponse, setTags, setSidebar } from "../redux/sideSlice";
 import useMultipleSvgMessages from "../hooks/useMultipleSvgMessages";
 import { useDispatch } from "react-redux";
 
@@ -18,6 +18,11 @@ const Index = () => {
   const response = useSelector((state: RootState) => state.sidebar.response);
   const tags = useSelector((state: RootState) => state.sidebar.tags);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Hide sidebar whenever pagelink changes
+  useEffect(() => {
+    dispatch(setSidebar(false));
+  }, [pagelink, dispatch]);
 
   const handleRemoveTag = (index: number) => {
     dispatch(setTags(tags.filter((_, i) => i !== index)));
