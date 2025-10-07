@@ -3,23 +3,36 @@ import SidebarTree from "./structure";
 
 const projectData = [
   {
-    name: "src",
+    name: "frontend",
     type: "folder",
     children: [
-      { name: "index.tsx", type: "file" },
-      { name: "App.tsx", type: "file" },
       {
-        name: "components",
+        name: "public",
+        type: "folder",
+        children: [{ name: "index.html", type: "file" }],
+      },
+      {
+        name: "src",
         type: "folder",
         children: [
-          { name: "SidebarTree.tsx", type: "file" },
-          { name: "Button.tsx", type: "file" },
+          { name: "components", type: "folder" },
+          { name: "hooks", type: "folder" },
+          { name: "redux", type: "folder" },
+          { name: "utils", type: "folder" },
+          { name: "App.js", type: "file" },
+          { name: "App.test.js", type: "file" },
+          { name: "index.css", type: "file" },
+          { name: "index.js", type: "file" },
+          { name: "postcss.config.js", type: "file" },
+          { name: "reportWebVitals.js", type: "file" },
+          { name: "setupTests.js", type: "file" },
         ],
       },
+      { name: "package.json", type: "file" },
+      { name: "package-lock.json", type: "file" },
+      { name: "tailwind.config.js", type: "file" },
     ],
   },
-  { name: "package.json", type: "file" },
-  { name: "tsconfig.json", type: "file" },
 ];
 
 export default function Data() {
