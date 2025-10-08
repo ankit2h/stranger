@@ -88,7 +88,7 @@ const Sidebar = ({ onClose }) => {
             textAlign: "center",
           }}
         >
-          NETFLIX
+          STREAMER
         </span>
       </div>
 
