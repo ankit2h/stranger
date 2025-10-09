@@ -26,9 +26,9 @@ const ResponsePanel = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed top-0 right-0 h-full w-96 bg-card border-l border-border shadow-2xl z-30 animate-in slide-in-from-right duration-300">
-      <div className="flex flex-col h-full">
-        <div className="flex items-center justify-between p-6 border-b border-border bg-gradient-subtle">
+    <div className="fixed top-0 right-0 h-full w-full md:w-96 md:max-w-[90vw] bg-card border-l border-border shadow-2xl z-30 animate-in slide-in-from-right duration-300">
+      <div className="flex flex-col h-full min-w-0">
+        <div className="flex items-center justify-between p-4 md:p-6 border-b border-border bg-gradient-subtle">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <Bot className="w-4 h-4 text-primary-foreground" />
@@ -46,7 +46,7 @@ const ResponsePanel = ({
         </div>
 
         {/* Query Display */}
-        <div className="p-6 border-b border-border">
+        <div className="p-4 md:p-6 border-b border-border">
           <div className="text-sm text-muted-foreground mb-2">
             Your question:
           </div>
@@ -56,9 +56,9 @@ const ResponsePanel = ({
         </div>
 
         {/* Response Content */}
-        <div className="flex-1 p-6  overflow-y-auto">
+        <div className="flex-1 p-4 md:p-6  overflow-y-auto overflow-x-auto">
           {isLoading ? (
-            <Card className="p-4 bg-gradient-subtle border-primary/20">
+            <Card className="p-4 bg-gradient-subtle border-primary/20 w-fit min-w-full">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-primary font-medium">
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -73,13 +73,13 @@ const ResponsePanel = ({
               </div>
             </Card>
           ) : (
-            <Card className="p-4 bg-gradient-subtle border-primary/20">
-              <div className="space-y-3">
+            <Card className="p-4 bg-gradient-subtle border-primary/20 w-fit min-w-full">
+              <div className="space-y-3 whitespace-nowrap">
                 <div className="flex items-center gap-2 text-primary font-medium">
                   <Bot className="w-4 h-4" />
                   AI Response
                 </div>
-                <div className="text-sm text-foreground leading-relaxed">
+                <div className="text-sm text-foreground leading-relaxed whitespace-normal">
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeHighlight]}
