@@ -61,7 +61,7 @@ const Portfolio = () => {
           rel="noreferrer"
           style={{ color: "#fff", textDecoration: "underline" }}
         >
-          open it here
+          View Project Portfolio
         </a>
         .
       </div>
