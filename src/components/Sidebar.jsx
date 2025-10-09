@@ -156,7 +156,7 @@ const Sidebar = ({ onClose }) => {
                 </ul>
               </div>
             ) : (
-              <Link to={`/${item.name}.html`.replace(/\s+/g, "-")}>
+              <Link to={`/${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
                 <div className="px-5 py-2 rounded-lg cursor-pointer text-gray-200 font-medium transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm">
                   {item.name}
                 </div>

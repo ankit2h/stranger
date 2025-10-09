@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar";
 import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
 import Data from "./data";
+import Portfolio from './portfolio';
 
 const queryClient = new QueryClient();
 
@@ -42,7 +43,8 @@ const App = () => {
             <Route path="/tutorial/:pagelink" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-            <Route path="/Structure.html" element={<Data />} />
+            <Route path="/structure" element={<Data />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
