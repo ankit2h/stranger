@@ -9,6 +9,7 @@ import { RootState } from "../redux/store";
 import { setOpen, setQuery, setResponse, setTags, setSidebar } from "../redux/sideSlice";
 import useMultipleSvgMessages from "../hooks/useMultipleSvgMessages";
 import { useDispatch } from "react-redux";
+import Header from "../components/Header";
 
 const Index = () => {
   const dispatch = useDispatch();
@@ -59,6 +60,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
+      {/* Header with pagelink prop */}
+      <Header pagelink={pagelink} />
       {/* Main Content Container */}
       <div
         className={`transition-all duration-300 ${
