@@ -10,7 +10,8 @@ import Sidebar from "./components/Sidebar";
 import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
 import Data from "./data";
-import Portfolio from './portfolio';
+import Portfolio from "./portfolio";
+import Setup from './setup';
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
             <Route path="/structure" element={<Data />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/setup" element={<Setup />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
