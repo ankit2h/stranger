@@ -11,7 +11,8 @@ import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
 import Data from "./data";
 import Portfolio from "./portfolio";
-import Setup from './setup';
+import Setup from "./setup";
+import Chat from "./pages/Chat";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
             <Route path="/structure" element={<Data />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/chat" element={<Chat />} />
             <Route path="/setup" element={<Setup />} />
           </Routes>
         </BrowserRouter>
