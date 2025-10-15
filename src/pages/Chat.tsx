@@ -205,7 +205,7 @@ const Chat = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Type your message... (Press Enter to send, Shift+Enter for new line)"
+              placeholder="Type your message..."
               className="min-h-[50px] max-h-[200px] resize-none bg-card border-border focus:ring-2 focus:ring-primary/20 focus:border-primary"
               rows={1}
             />
@@ -218,10 +218,6 @@ const Chat = () => {
               <Send className="w-5 h-5" />
             </Button>
           </form>
-          <p className="text-xs text-muted-foreground mt-2 text-center">
-            AI responses are simulated. Connect to an AI API for real
-            conversations.
-          </p>
         </div>
       </div>
     </div>
