@@ -1,21 +1,67 @@
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { addUser, clearUser } from "./redux/sideSlice";
+// import useMessages from "./hooks/useMessages";
+
+// Client-side UUID generator with fallback
+function generateUUID() {
+  if (typeof crypto !== "undefined" && typeof (crypto as any).randomUUID === "function") {
+    // @ts-ignore
+    return (crypto as any).randomUUID();
+  }
+  // fallback simple UUID (not RFC-perfect but acceptable client-side)
+  return 'u_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 9);
+}
+
+const CREATE_USER_ENDPOINT = "https://my-backend-app-245577333791.us-central1.run.app/api/v1/ai/create-user"; // imaginary endpoint to create user doc
 
 const UserTracker = () => {
   const dispatch = useDispatch();
+  // const { fetchMessages } = useMessages();
+
   useEffect(() => {
-    fetch("https://my-backend-app-245577333791.us-central1.run.app/api/v1/ai/tracker", { credentials: "include" })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.userId) {
-          dispatch(addUser(data.userId));
+    // parse cookie for userId
+    const match = document.cookie.split(";").map(c => c.trim()).find(c => c.startsWith("userId=") || c.startsWith("userID=") || c.startsWith("userid="));
+    let userId: string | null = null;
+    if (match) {
+      const parts = match.split("=");
+      userId = parts.slice(1).join("=");
+    }
+
+    if (!userId) {
+      // generate, set cookie, and notify backend to create record
+      userId = generateUUID();
+      // set cookie (client-side can't set HttpOnly)
+      const maxAge = 60 * 60 * 24 * 365; // 1 year
+      document.cookie = `userId=${userId}; max-age=${maxAge}; path=/; samesite=lax`;
+
+      // send to imaginary create-user endpoint (best-effort)
+      (async () => {
+        try {
+          await fetch(CREATE_USER_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userid: userId }),
+          });
+        } catch (err) {
+          // ignore network errors for now; record will be created when backend receives later requests
+          console.warn("create-user request failed:", err);
         }
-      });
+      })();
+    }
+
+    // store userId in redux
+    if (userId) {
+      dispatch(addUser(userId));
+      // trigger loading messages for this user
+      // try { fetchMessages(); } catch (e) { /* ignore */ }
+    }
+
     return () => {
       dispatch(clearUser());
     };
   }, [dispatch]);
+
   return null;
 };
 
