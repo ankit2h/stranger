@@ -12,6 +12,7 @@ export interface SideState {
   query: string;
   id: string;
   tags: any[];
+  messages: any[];
 }
 
 const initialState: SideState = {
@@ -26,6 +27,7 @@ const initialState: SideState = {
   query: "",
   id: "",
   tags: [],
+  messages: [],
 };
 
 const sideSlice = createSlice({
@@ -71,6 +73,9 @@ const sideSlice = createSlice({
     setTags: (state, action: PayloadAction<any[]>) => {
       state.tags = action.payload;
     },
+    setMessages: (state, action: PayloadAction<any[]>) => {
+      state.messages = action.payload;
+    },
   },
 });
 
@@ -88,5 +93,6 @@ export const {
   setQuery,
   setId,
   setTags,
+  setMessages,
 } = sideSlice.actions;
 export default sideSlice.reducer;

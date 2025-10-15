@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Bot, User, Send, Home } from "lucide-react";
 import useAskModel from "../hooks/useChatAsk";
+import useMessages from "../hooks/useMessages";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github.css";
 
 interface Message {
   id: string;
@@ -12,14 +19,12 @@ interface Message {
 }
 
 const Chat = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "1",
-      role: "assistant",
-      content: "Hello! I'm your AI assistant. How can I help you today?",
-      timestamp: new Date(),
-    },
-  ]);
+  // trigger loading messages into the store (hook runs fetch on mount)
+  useMessages();
+
+  const storeMessages = useSelector((s: RootState) => s.sidebar.messages || []);
+
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -33,6 +38,49 @@ const Chat = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // When storeMessages updates, normalize them into local chat message shape
+  useEffect(() => {
+    if (!Array.isArray(storeMessages) || storeMessages.length === 0) {
+      // fallback greeting when no stored messages
+      setMessages([
+        {
+          id: "greeting-1",
+          role: "assistant",
+          content: "Hello! I'm your AI assistant. How can I help you today?",
+          timestamp: new Date(),
+        },
+      ]);
+      return;
+    }
+
+    // storeMessages expected shape: { query, response, timestamp, svg }
+    // Convert to chronological order (oldest first)
+    const ordered = [...storeMessages].sort(
+      (a, b) =>
+        new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
+    );
+    const normalized: Message[] = [];
+    for (const item of ordered) {
+      const ts = item.timestamp ? new Date(item.timestamp) : new Date();
+      const tsId = ts.toISOString();
+      // user message
+      normalized.push({
+        id: `${tsId}-u`,
+        role: "user",
+        content: String(item.query || ""),
+        timestamp: ts,
+      });
+      // assistant message
+      normalized.push({
+        id: `${tsId}-a`,
+        role: "assistant",
+        content: String(item.response || ""),
+        timestamp: ts,
+      });
+    }
+    setMessages(normalized);
+  }, [storeMessages]);
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -102,7 +150,12 @@ const Chat = () => {
                   }`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                    {message.content}
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      rehypePlugins={[rehypeHighlight]}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
                   </p>
                   <p
                     className={`text-xs mt-2 ${
