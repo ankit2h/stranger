@@ -173,7 +173,7 @@ const Sidebar = ({ onClose }) => {
           <span className="block text-center">Clear it!</span>
         </span>
 
-        <Link to={`https://netflix.learnest.tech/tutorial/Express%20Setup`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-bold shadow-lg hover:from-indigo-700 hover:to-indigo-500 transition-all duration-200 border-2 border-indigo-500 hover:border-white text-lg">
+        <Link to={`https://netflix.learnest.tech/`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-bold shadow-lg hover:from-indigo-700 hover:to-indigo-500 transition-all duration-200 border-2 border-indigo-500 hover:border-white text-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

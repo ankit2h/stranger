@@ -126,8 +126,8 @@ const Chat = () => {
 
   return (
     <div className="flex flex-col h-screen bg-background ">
-      {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto mt-20">
+  {/* Messages Area (leave space for fixed header) */}
+  <div className="flex-1 overflow-y-auto pt-[130px]">
         <div className="container mx-auto px-4 py-6 max-w-4xl">
           <div className="space-y-6">
             {messages.map((message) => (
