@@ -52,7 +52,7 @@ const Header = ({ pagelink }) => {
       {/* Centered Title Bar */}
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full pointer-events-none">
               {/* Desktop/Laptop AI Chat button (hidden on small screens) */}
-              <Link to={`/`} className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-auto hidden md:block">
+              <Link to={`https://netflix.learnest.tech/`} className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-auto hidden md:block">
                 <Button
                   variant="outline"
                   className="gap-2 pointer-events-auto"
