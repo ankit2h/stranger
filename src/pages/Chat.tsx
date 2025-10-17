@@ -143,18 +143,19 @@ const Chat = () => {
                   </div>
                 )}
                 <div
-                  className={` rounded-lg p-4 max-w-[80%] md:max-w-[70%]  ${
+                  className={`max-w-[100%] md:max-w-[70%] rounded-lg p-4 ${
                     message.role === "user"
                       ? "bg-primary text-primary-foreground"
-                      : "bg-card border border-border shadow-card overflow-x-auto"
+                      : "bg-card border border-border shadow-card"
                   }`}
                 >
-                  <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                  <p className="text-sm leading-relaxed whitespace-pre-wrap ">
                     <ReactMarkdown
                       remarkPlugins={[remarkGfm]}
                       rehypePlugins={[rehypeHighlight]}
                     >
                       {message.content}
+                      {/* Hello! I'm your AI assistant. How can I help you today? */}
                     </ReactMarkdown>
                   </p>
                   <p
