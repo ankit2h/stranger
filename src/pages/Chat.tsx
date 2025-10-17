@@ -146,7 +146,7 @@ const Chat = () => {
                   className={`max-w-[100%] md:max-w-[70%] rounded-lg p-4 ${
                     message.role === "user"
                       ? "bg-primary text-primary-foreground"
-                      : "bg-card border border-border shadow-card"
+                      : "  "
                   }`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap ">
