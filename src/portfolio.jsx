@@ -1,28 +1,50 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { setSidebar } from "./redux/sideSlice";
 import { useDispatch } from "react-redux";
 
 const styles = {
-  pdfFrame: {
-    width: "100vw",
-    height: "calc(100vh - 80px)", // leave space for header
-    border: 0,
-    marginTop: "0px",
-    display: "block",
+  container: {
+    width: '100vw',
+    minHeight: '100vh',
+    background: '#18181b',
+    overflowX: 'hidden',
+    paddingTop: '80px', // leave space for header
+    paddingBottom: '2rem',
   },
-  fallback: {
-    position: "absolute",
-    left: 12,
-    top: 12,
-    zIndex: 9999,
-    // background: "rgba(0, 0, 0, 0.6)",
-    color: "#fff",
-    padding: "8px 12px",
-    borderRadius: 8,
-    fontFamily: "system-ui, sans-serif",
-    display: "none",
+  column: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2rem',
+    padding: '2rem',
+    alignItems: 'center',
+    maxWidth: '1200px',  // reduced width
+    margin: '0 auto',   // center in container
   },
+  imageWrapper: {
+    backgroundColor: '#27272a',
+    borderRadius: '0.5rem',
+    overflow: 'hidden',
+    cursor: 'pointer',
+    transition: 'transform 0.2s ease-in-out',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+  },
+  image: {
+    display: 'block',
+    maxWidth: '100%',
+    height: 'auto',
+  }
 };
+
+// Array of image paths (update these with your actual image paths)
+const images = [
+  '/map1.jpg',
+  '/map2.jpg',
+  '/map3.jpg',
+  '/map4.jpg',
+  '/map5.jpg',
+  // '/map6.jpg',
+  // Add more image paths as needed
+];
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -30,48 +52,24 @@ const Portfolio = () => {
   useEffect(() => {
     dispatch(setSidebar(false));
   }, [dispatch]);
-  const fallbackRef = useRef(null);
-
-  useEffect(() => {
-    // Show fallback if PDF fails to load
-    const frame = document.getElementById("pdfFrame");
-    const fallback = fallbackRef.current;
-    if (frame) {
-      frame.onerror = () => {
-        if (fallback) fallback.style.display = "block";
-      };
-    }
-  }, []);
 
   return (
-    <div
-      style={{
-        width: "100vw",
-        minHeight: "100vh",
-        background: "#18181b",
-        overflowX: "hidden",
-      }}
-    >
-      {/* Fallback link in case browser blocks inline PDF rendering */}
-      <div ref={fallbackRef} style={styles.fallback} className="fallback">
-        If the PDF doesn't display,
-        <a
-          href="/presentation.pdf"
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: "#fff", textDecoration: "underline" }}
-        >
-          View Project Portfolio
-        </a>
-        .
-      </div>
-      <div style={{ paddingTop: "80px" }}>
-        <iframe
-          id="pdfFrame"
-          style={styles.pdfFrame}
-          src="/presentation.pdf#toolbar=0&navpanes=0&scrollbar=0"
-          title="Presentation PDF"
-        />
+    <div style={styles.container}>
+      <div style={styles.column}>
+        {images.map((src, index) => (
+          <div
+            key={index}
+            style={styles.imageWrapper}
+            onClick={() => window.open(src, '_blank')}
+          >
+            <img
+              src={src}
+              alt={`Map ${index + 1}`}
+              style={styles.image}
+              loading="lazy"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
