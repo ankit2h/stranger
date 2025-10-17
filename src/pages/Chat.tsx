@@ -143,10 +143,10 @@ const Chat = () => {
                   </div>
                 )}
                 <div
-                  className={`max-w-[80%] md:max-w-[70%] rounded-lg p-4 ${
+                  className={` rounded-lg p-4 max-w-[80%] md:max-w-[70%]  ${
                     message.role === "user"
                       ? "bg-primary text-primary-foreground"
-                      : "bg-card border border-border shadow-card"
+                      : "bg-card border border-border shadow-card overflow-x-auto"
                   }`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">
