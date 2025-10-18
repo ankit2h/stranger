@@ -10,6 +10,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github.css";
+import { setSidebar } from "../redux/sideSlice";
+import { useDispatch } from "react-redux";
 
 interface Message {
   id: string;
@@ -19,6 +21,11 @@ interface Message {
 }
 
 const Chat = () => {
+    const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setSidebar(false));
+  }, [dispatch]);
   // trigger loading messages into the store (hook runs fetch on mount)
   useMessages();
 
