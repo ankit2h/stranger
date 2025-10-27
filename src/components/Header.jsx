@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { setSidebar } from "../redux/sideSlice";
 import { useNavigate } from "react-router-dom";
+import { SignedIn, SignedOut, UserButton, SignInButton, SignOutButton } from "@clerk/clerk-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -33,6 +34,20 @@ const Header = () => {
 
       {/* Centered Title Bar */}
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full pointer-events-none"></div>
+      {/* User Button Top Right */}
+  <div className="absolute right-2 top-2 sm:right-4 sm:top-4 flex flex-col sm:flex-row items-end sm:items-center gap-2 z-30">
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+          <SignOutButton>
+            <button className="ml-2 px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition">Sign Out</button>
+          </SignOutButton>
+        </SignedIn>
+        <SignedOut>
+          <SignInButton>
+            <button className="px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition">Sign In</button>
+          </SignInButton>
+        </SignedOut>
+      </div>
     </div>
   );
 };

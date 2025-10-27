@@ -49,8 +49,8 @@ const App = () => {
               />
             </div>
           )}
-          <Header />
           <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+            <Header />
             <Routes>
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
