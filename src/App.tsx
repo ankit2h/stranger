@@ -3,16 +3,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
-import Data from "./data";
-import Portfolio from "./portfolio";
-import Setup from "./setup";
-import Chat from "./pages/Chat";
+import Gallery from "./pages/Gallery";
+import MovieDetails from "./pages/MovieDetails";
 
 const queryClient = new QueryClient();
 
@@ -42,13 +39,10 @@ const App = () => {
           )}
           <Header />
           <Routes>
-            <Route path="/tutorial/:pagelink" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-            <Route path="/structure" element={<Data />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/" element={<Chat />} />
-            <Route path="/setup" element={<Setup />} />
+            <Route path="/movie-plot" element={<Gallery />} />
+            <Route path="/" element={<MovieDetails />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

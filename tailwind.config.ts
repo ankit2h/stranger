@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{js,jsx,ts,tsx,html}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx,html}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -13,8 +18,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        netflix: ["Bebas Neue", "Roboto", "sans-serif"],
+      },
       colors: {
-        'netflix-red': '#e50914',
+        "netflix-red": "#e50914",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -60,19 +68,19 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
-      fontFamily: {
-        bebas: ['Bebas Neue', 'sans-serif'],
-      },
+      // fontFamily: {
+      //   bebas: ["Bebas Neue", "sans-serif"],
+      // },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
         "gradient-subtle": "var(--gradient-subtle)",
       },
       boxShadow: {
-        "soft": "var(--shadow-soft)",
-        "card": "var(--shadow-card)",
+        soft: "var(--shadow-soft)",
+        card: "var(--shadow-card)",
       },
       transitionTimingFunction: {
-        "smooth": "var(--transition-smooth)",
+        smooth: "var(--transition-smooth)",
       },
       borderRadius: {
         lg: "var(--radius)",

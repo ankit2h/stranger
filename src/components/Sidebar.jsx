@@ -23,46 +23,12 @@ const Sidebar = ({ onClose }) => {
   // Fetch all links from backend API
   const [links, setLinks] = useState([]);
   const [fronts, setFronts] = useState([]);
-  useEffect(() => {
-    const fetchLinks = async () => {
-      try {
-        const res = await fetch(
-          "https://my-backend-app-245577333791.us-central1.run.app/api/v1/ai/link"
-        );
-        if (!res.ok) throw new Error("Failed to fetch links");
-        const data = await res.json();
-        setLinks(data);
-        const res2 = await fetch(
-          "https://my-backend-app-245577333791.us-central1.run.app/api/v1/ai/front"
-        );
-        if (!res2.ok) throw new Error("Failed to fetch links");
-        const data2 = await res2.json();
-        setFronts(data2);
-      } catch (err) {
-        console.error("Error fetching links:", err);
-      }
-    };
-    fetchLinks();
-  }, []);
 
   const toggleDropdown = (item) => {
     setOpenDropdown(openDropdown === item ? null : item);
   };
 
-  const menuItems = [
-    { name: "Portfolio" },
-    { name: "Setup" },
-    { name: "Structure" },
-
-    {
-      name: "Backend",
-      children: links.map((l) => l.link),
-    },
-    {
-      name: "Frontend",
-      children: fronts.map((l) => l.link),
-    },
-  ];
+  const menuItems = [{ name: "Movie Plot" }];
 
   return (
     <aside className="fixed w-56 lg:w-96 h-screen bg-gradient-to-b from-[#18181b] to-[#111113] text-white shadow-2xl flex flex-col border-r border-gray-800 mt-2 z-[9999] overflow-y-auto hide-scrollbar">
@@ -88,14 +54,16 @@ const Sidebar = ({ onClose }) => {
             textAlign: "center",
           }}
         >
-          STREAMER
+          STRANGER THINGS
         </span>
       </div>
 
       {/* Menu */}
       <ul className="space-y-2 px-2 flex-1 justify-center items-center">
-       <div className="flex justify-center w-full">
-          <Link to={`https://home.learnest.tech`}
+        <div className="flex justify-center w-full">
+          <Link
+            to={`/`}
+            onClick={() => dispatch(setSidebar(false))}
             className="px-4 py-2 mb-7 w-40 rounded-lg bg-gradient-to-r from-[#232326] to-[#18181b] cursor-pointer transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm"
             style={{
               boxShadow: "0 0 8px #6366f1, 0 0 16px #6366f1, 0 0 24px #6366f1", // indigo-500
@@ -147,6 +115,7 @@ const Sidebar = ({ onClose }) => {
                     >
                       <Link
                         to={`/tutorial/${child}`}
+                        onClick={() => dispatch(setSidebar(false))}
                         className="block w-full h-full"
                       >
                         {child}
@@ -156,7 +125,10 @@ const Sidebar = ({ onClose }) => {
                 </ul>
               </div>
             ) : (
-              <Link to={`/${item.name.toLowerCase().replace(/\s+/g, "-")}`}>
+              <Link
+                to={`/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                onClick={() => dispatch(setSidebar(false))}
+              >
                 <div className="px-5 py-2 rounded-lg cursor-pointer text-gray-200 font-medium transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm">
                   {item.name}
                 </div>
@@ -165,32 +137,6 @@ const Sidebar = ({ onClose }) => {
           </li>
         ))}
       </ul>
-
-      {/* Chat Button Box */}
-      <div className="flex flex-col items-center mt-8 mb-4">
-        <span className="mb-2 text-sm text-gray-300 font-semibold tracking-wide block">
-          Have doubts in Project?
-          <span className="block text-center">Clear it!</span>
-        </span>
-
-        <Link to={`https://netflix.learnest.tech/`} className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-bold shadow-lg hover:from-indigo-700 hover:to-indigo-500 transition-all duration-200 border-2 border-indigo-500 hover:border-white text-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M2.25 12.75c0 2.485 2.485 4.5 5.25 4.5h.75v3l3.75-3h4.5c2.765 0 5.25-2.015 5.25-4.5v-6c0-2.485-2.485-4.5-5.25-4.5h-9c-2.765 0-5.25 2.015-5.25 4.5v6z"
-            />
-          </svg>
-          Chat
-        </Link>
-      </div>
 
       {/* Footer */}
       <div className="px-6 py-4 border-t border-gray-800 text-xs text-gray-500">
