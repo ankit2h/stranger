@@ -10,10 +10,22 @@ import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
 import Gallery from "./pages/Gallery";
 import MovieDetails from "./pages/MovieDetails";
+import {
+  SignedIn,
+  SignedOut,
+  RedirectToSignIn,
+  ClerkProvider,
+} from "@clerk/clerk-react";
 
 const queryClient = new QueryClient();
 
 const App = () => {
+  const PUBLISHABLE_KEY =
+    "pk_test_c2luZ3VsYXItYW5lbW9uZS04MS5jbGVyay5hY2NvdW50cy5kZXYk";
+
+  if (!PUBLISHABLE_KEY) {
+    throw new Error("Add your Clerk Publishable Key to the .env file");
+  }
   const open = useSelector((state: RootState) => state.sidebar.sidebar);
   return (
     <QueryClientProvider client={queryClient}>
@@ -38,12 +50,28 @@ const App = () => {
             </div>
           )}
           <Header />
-          <Routes>
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-            <Route path="/movie-plot" element={<Gallery />} />
-            <Route path="/" element={<MovieDetails />} />
-          </Routes>
+          <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+            <Routes>
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+              <Route
+                path="/movie-plot"
+                element={
+                  <>
+                    <SignedIn>
+                      <Gallery />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn
+                        redirectUrl={window.location.pathname}
+                      />
+                    </SignedOut>
+                  </>
+                }
+              />
+              <Route path="/" element={<MovieDetails />} />
+            </Routes>
+          </ClerkProvider>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
