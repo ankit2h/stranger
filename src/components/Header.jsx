@@ -46,7 +46,7 @@ const Header = () => {
         </SignedIn>
         <SignedOut>
           <SignInButton>
-            <button className="px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition mt-4">Sign In</button>
+            <button className="text-sm px-2 py-1 sm:text-base sm:px-3 sm:py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition mt-5">Sign In</button>
           </SignInButton>
         </SignedOut>
       </div>
