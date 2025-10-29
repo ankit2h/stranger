@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
 import Gallery from "./pages/Gallery";
 import MovieDetails from "./pages/MovieDetails";
+import MovieCast from "./pages/Cast";
 import {
   SignedIn,
   SignedOut,
@@ -60,6 +61,21 @@ const App = () => {
                   <>
                     <SignedIn>
                       <Gallery />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn
+                        redirectUrl={window.location.pathname}
+                      />
+                    </SignedOut>
+                  </>
+                }
+              />
+              <Route
+                path="/cast"
+                element={
+                  <>
+                    <SignedIn>
+                      <MovieCast />
                     </SignedIn>
                     <SignedOut>
                       <RedirectToSignIn

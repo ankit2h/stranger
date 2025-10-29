@@ -37,14 +37,16 @@ const Header = () => {
       {/* User Button Top Right */}
   <div className="absolute right-2 top-2 sm:right-4 sm:top-4 flex flex-col sm:flex-row items-end sm:items-center gap-2 z-30">
         <SignedIn>
-          <UserButton afterSignOutUrl="/" />
-          <SignOutButton>
-            <button className="ml-2 px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition">Sign Out</button>
-          </SignOutButton>
+          <div className="flex items-center mt-4">
+            <UserButton />
+            <SignOutButton>
+              <button className="ml-2 px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition hidden sm:inline-block">Sign Out</button>
+            </SignOutButton>
+          </div>
         </SignedIn>
         <SignedOut>
           <SignInButton>
-            <button className="px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition">Sign In</button>
+            <button className="px-3 py-1 rounded bg-[#e50914] text-white font-bold hover:bg-[#b00610] transition mt-4">Sign In</button>
           </SignInButton>
         </SignedOut>
       </div>
