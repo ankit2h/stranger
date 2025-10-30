@@ -12,7 +12,7 @@ const MovieDetails = () => {
       {/* Header */}
       <header className="px-4 md:px-12 py-6 bg-gradient-to-b from-black/80 to-transparent">
         <h1 className="text-[#e50914] text-4xl md:text-5xl font-bold tracking-tight text-center">
-          STRANGER THINGS
+          ANDHADHUN
         </h1>
       </header>
 
@@ -23,7 +23,7 @@ const MovieDetails = () => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/2iVYI99VGaw?si=i4GIChvQ8gHOKFbY?autoplay=1&mute=1"
             title="Stranger Things Trailer"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -36,28 +36,25 @@ const MovieDetails = () => {
         <Card className="bg-[#1f1f1f] border-none shadow-2xl">
           <CardHeader>
             <CardTitle className="text-white text-3xl font-bold tracking-tight">
-              About the Show
+              About the Moviebook
             </CardTitle>
             <CardDescription className="text-gray-300 text-base leading-relaxed mt-4">
-              Set in the 1980s in the fictional town of Hawkins, Indiana,
-              Stranger Things is a thrilling science fiction horror series that
-              follows a group of friends as they uncover supernatural mysteries.
-              When a young boy named Will Byers mysteriously vanishes, his
-              mother Joyce, the town's police chief Jim Hopper, and Will's
-              friends embark on a desperate search to find him. Their
-              investigation leads them to a parallel dimension known as the
-              Upside Down, a dark and dangerous place inhabited by terrifying
-              creatures. Along the way, they encounter Eleven, a young girl with
-              extraordinary psychokinetic abilities who escaped from a secret
-              government laboratory. As the group delves deeper into the
-              mystery, they discover that Hawkins is at the center of a
-              government conspiracy involving secret experiments that have
-              opened a gateway between dimensions. The show brilliantly combines
-              elements of horror, adventure, and coming-of-age drama, paying
-              homage to 1980s pop culture while creating its own unique and
-              captivating narrative. With its compelling characters, atmospheric
-              tension, and nostalgic references, Stranger Things has become a
-              cultural phenomenon that resonates with audiences worldwide.
+              The Andhadhun Moviebook brings one of India’s most unpredictable
+              thrillers to life through an immersive storytelling experience.
+              Rather than simply retelling the movie, it transforms the
+              narrative into a chapter-based journey — where each page unfolds
+              like a scene, complete with titles, visuals, and emotions that
+              mirror the film’s rhythm and suspense. This moviebook takes you
+              deep into Akash’s world — a pianist whose act of pretending to be
+              blind spirals into a chain of crime, chaos, and moral confusion.
+              Each section explores how perception, deception, and survival
+              intertwine, revealing the fine line between truth and illusion.
+              Through vivid writing and cinematic structure, it captures the
+              tension and irony that define Andhadhun’s storytelling. Designed
+              for film lovers and creative storytellers alike, the Andhadhun
+              Moviebook invites you to experience the film in a new form — one
+              where music becomes narrative, suspense turns into reflection, and
+              every page feels like a frame from the movie itself.
             </CardDescription>
           </CardHeader>
         </Card>
