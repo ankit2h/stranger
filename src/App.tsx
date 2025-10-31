@@ -8,7 +8,12 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { useSelector } from "react-redux";
 import type { RootState } from "./redux/store";
-import Gallery from "./pages/Gallery";
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
+import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
+import Page5 from "./pages/Page5";
+
 import MovieDetails from "./pages/MovieDetails";
 import MovieCast from "./pages/Cast";
 import {
@@ -56,11 +61,71 @@ const App = () => {
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
               <Route
-                path="/movie-plot"
+                path="/The-corpse-behind-the-curtain"
                 element={
                   <>
                     <SignedIn>
-                      <Gallery />
+                      <Page2 />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn
+                        redirectUrl={window.location.pathname}
+                      />
+                    </SignedOut>
+                  </>
+                }
+              />
+              <Route
+                path="/the-game-of-deception"
+                element={
+                  <>
+                    <SignedIn>
+                      <Page3 />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn
+                        redirectUrl={window.location.pathname}
+                      />
+                    </SignedOut>
+                  </>
+                }
+              />
+               <Route
+                path="/the-symphony-of-lies"
+                element={
+                  <>
+                    <SignedIn>
+                      <Page4 />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn
+                        redirectUrl={window.location.pathname}
+                      />
+                    </SignedOut>
+                  </>
+                }
+              />
+               <Route
+                path="/the-final-note"
+                element={
+                  <>
+                    <SignedIn>
+                      <Page5 />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn
+                        redirectUrl={window.location.pathname}
+                      />
+                    </SignedOut>
+                  </>
+                }
+              />
+               <Route
+                path="/the-melodic-illusion"
+                element={
+                  <>
+                    <SignedIn>
+                      <Page1 />
                     </SignedIn>
                     <SignedOut>
                       <RedirectToSignIn

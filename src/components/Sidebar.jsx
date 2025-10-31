@@ -28,7 +28,7 @@ const Sidebar = ({ onClose }) => {
     setOpenDropdown(openDropdown === item ? null : item);
   };
 
-  const menuItems = [{ name: "Movie Plot" }, { name: "Cast" }];
+  const menuItems = [{ name: "The Melodic Illusion" },{ name: "The Corpse Behind the Curtain" },{ name: "The Game of Deception" },{ name: "The Symphony of Lies" },{ name: "The Final Note" }, { name: "Cast" }];
 
   return (
     <aside className="fixed w-56 lg:w-96 h-screen bg-gradient-to-b from-[#18181b] to-[#111113] text-white shadow-2xl flex flex-col border-r border-gray-800 mt-2 z-[9999] overflow-y-auto hide-scrollbar">
@@ -54,7 +54,7 @@ const Sidebar = ({ onClose }) => {
             textAlign: "center",
           }}
         >
-          STRANGER THINGS
+          ANDHADHUN
         </span>
       </div>
 

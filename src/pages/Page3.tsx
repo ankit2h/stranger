@@ -3,45 +3,27 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Play } from "lucide-react";
 
-const Gallery = () => {
+const Page3 = () => {
   const navigate = useNavigate();
   const cards = [
     {
       id: 1,
-      title: "Stranger Things",
-      description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+      title: "Simi’s Suspicion",
+      description: "Simi’s paranoia deepens. She begins to stalk Akash, visiting his apartment under the pretext of checking on him. Her eyes scan the room, searching for proof of sight. Akash tries to maintain his blind act, fumbling around and pretending ignorance. But a single misstep—a startled reaction to a movement—gives her reason to doubt.",
       image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800&q=80"
     },
     {
       id: 2,
-      title: "The Crown",
-      description: "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
+      title: "The Poisoned Offer",
+      description: "Feigning kindness, Simi offers Akash a glass of poisoned tea. He drinks it, unaware of her plan. Soon, darkness consumes him—real this time. When he wakes up, he’s in an unfamiliar place, bound and helpless. For the first time, his blindness isn’t a choice; it’s survival against forces far beyond his control.",
       image: "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?w=800&q=80"
     },
     {
       id: 3,
-      title: "Bridgerton",
-      description: "The eight close-knit siblings of the Bridgerton family look for love and happiness in London high society.",
+      title: "The Doctor’s Bargain",
+      description: "Akash finds himself at the mercy of a corrupt doctor and his wife, who see him as an opportunity to make money by selling his organs. The doctor’s wife, however, takes pity on him, moved by his story and innocence. Together, they strike a deal that leads to a new cycle of manipulation, deceit, and survival.",
       image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80"
     },
-    {
-      id: 4,
-      title: "Wednesday",
-      description: "Follows Wednesday Addams' years as a student at Nevermore Academy, where she tries to master her emerging psychic ability.",
-      image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80"
-    },
-    {
-      id: 5,
-      title: "The Witcher",
-      description: "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
-      image: "https://images.unsplash.com/photo-1518895312237-a9e23508077d?w=800&q=80"
-    },
-    {
-      id: 6,
-      title: "Dark",
-      description: "A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes relationships among four families.",
-      image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80"
-    }
   ];
 
   return (
@@ -49,21 +31,8 @@ const Gallery = () => {
       {/* Header */}
       <header className="px-4 md:px-12 py-6 bg-gradient-to-b from-black/80 to-transparent">
       <h1 className="text-[#e50914] text-4xl md:text-5xl font-bold tracking-tight text-center">
-              GALLERY
+              The Game of Deception
             </h1>
-        {/* <div className="flex justify-between items-center">
-          <div>
-            
-            <p className="text-gray-400 mt-2 text-lg">Explore our collection</p>
-          </div>
-          <Button
-            onClick={() => navigate("/movie-details")}
-            className="bg-[#e50914] hover:bg-[#c4070f] text-white gap-2"
-          >
-            <Play className="w-4 h-4" />
-            Movie Details
-          </Button>
-        </div> */}
       </header>
 
       {/* Cards Grid */}
@@ -100,4 +69,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Page3;
