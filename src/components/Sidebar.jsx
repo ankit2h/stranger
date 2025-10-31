@@ -66,8 +66,8 @@ const Sidebar = ({ onClose }) => {
             onClick={() => dispatch(setSidebar(false))}
             className="px-4 py-2 mb-7 w-40 rounded-lg bg-gradient-to-r from-[#232326] to-[#18181b] cursor-pointer transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm"
             style={{
-              boxShadow: "0 0 8px #6366f1, 0 0 16px #6366f1, 0 0 24px #6366f1", // indigo-500
-              textShadow: "0 0 8px #6366f1, 0 0 16px #6366f1, 0 0 24px #6366f1", // indigo-500
+              boxShadow: "0 0 8px #e50914, 0 0 16px #e50914, 0 0 24px #e50914", // indigo-500
+              textShadow: "0 0 8px #e50914, 0 0 16px #e50914, 0 0 24px #e50914", // indigo-500
               fontFamily: "Bebas Neue, sans-serif",
               color: "#fff",
               fontWeight: 900,
