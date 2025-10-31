@@ -35,7 +35,7 @@ const MovieDetails = () => {
         {/* Movie Introduction Card */}
         <Card className="bg-[#1f1f1f] border-none shadow-2xl">
           <CardHeader>
-            <CardTitle className="text-white text-3xl font-bold tracking-tight">
+            <CardTitle className="text-white text-3xl font-bold tracking-normal">
               About the Moviebook
             </CardTitle>
             <CardDescription className="text-gray-300 text-base leading-relaxed mt-4">

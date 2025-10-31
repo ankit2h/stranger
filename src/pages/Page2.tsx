@@ -30,7 +30,7 @@ const Page2 = () => {
     <div className="min-h-screen bg-[#141414] text-white font-netflix">
       {/* Header */}
       <header className="px-4 md:px-12 py-6 bg-gradient-to-b from-black/80 to-transparent">
-      <h1 className="text-[#e50914] text-4xl md:text-5xl font-bold tracking-tight text-center">
+      <h1 className="text-[#e50914] text-4xl md:text-5xl font-bold tracking-normal text-center">
               The Corpse Behind the Curtain
             </h1>
       </header>
@@ -44,7 +44,7 @@ const Page2 = () => {
               className="bg-[#1f1f1f] border-none hover:scale-105 transition-transform duration-300 cursor-pointer group overflow-hidden"
             >
               <CardHeader className="pb-3">
-                <CardTitle className="text-white text-2xl font-bold tracking-tight">
+                <CardTitle className="text-white text-2xl font-bold tracking-normal">
                   {card.title}
                 </CardTitle>
                 <CardDescription className="text-gray-400 text-base leading-relaxed mt-2">

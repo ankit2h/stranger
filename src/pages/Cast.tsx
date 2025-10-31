@@ -10,7 +10,7 @@ const MovieCast = () => {
       name: "Ayushmann Khurrana",
       role: "Akash Saraf",
       image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+        "https://assets.gqindia.com/photos/66193c524cae6d217224ece4/1:1/w_1080,h_1080,c_limit/GQ-Hype-Ayushmann-Khurrana.jpg?w=400&h=400&fit=crop",
       intro:
         "A talented pianist who pretends to be blind, only to find himself caught in a deadly web of murder and deception.",
     },
@@ -18,7 +18,7 @@ const MovieCast = () => {
       name: "Tabu",
       role: "Simi Sinha",
       image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f3/Tabu_in_2024.jpg?w=400&h=400&fit=crop",
       intro:
         "A charming yet ruthless woman whose secrets and manipulations drive the story’s darkest turns.",
     },
@@ -26,7 +26,7 @@ const MovieCast = () => {
       name: "Radhika Apte",
       role: "Sophie",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+        "https://www.bookmyartistindia.com/wp-content/uploads/2023/10/BC_RadhikaApte_1.png?w=400&h=400&fit=crop",
       intro:
         "Akash’s kind-hearted love interest who becomes unknowingly involved in his tangled world of lies.",
     },
@@ -34,7 +34,7 @@ const MovieCast = () => {
       name: "Anil Dhawan",
       role: "Pramod Sinha",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2023/06/anil-dhawan.png?size=*:900?w=400&h=400&fit=crop",
       intro:
         "A retired film star whose unexpected death sets off the chain of shocking events.",
     },
@@ -42,7 +42,7 @@ const MovieCast = () => {
       name: "Manav Vij",
       role: "Inspector Manohar",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        "https://images.timesnownews.com/thumb/msid-113123813,thumbsize-1537319,width-1280,height-720,resizemode-75/113123813.jpg?w=400&h=400&fit=crop",
       intro:
         "A corrupt police officer and Simi’s lover, trapped between greed and fear.",
     },
@@ -50,7 +50,7 @@ const MovieCast = () => {
       name: "Ashwini Kalsekar",
       role: "Rasika",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        "https://in.bmscdn.com/iedb/artist/images/website/poster/large/ashwini-kalsekar-255-1716804543.jpg?w=400&h=400&fit=crop",
       intro:
         "The doctor’s cunning wife who becomes Akash’s unlikely ally in his fight for survival.",
     },
@@ -58,7 +58,7 @@ const MovieCast = () => {
       name: "Zakir Hussain",
       role: "Dr. Swami",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        "https://m.media-amazon.com/images/M/MV5BZjhhYzNjNDAtZDMzNy00OTkzLTg4NzEtZTllY2NmYjAzODJhXkEyXkFqcGc@._V1_.jpg?w=400&h=400&fit=crop",
       intro:
         "A shady doctor whose twisted humor adds irony and chaos to Akash’s ordeal.",
     },
@@ -68,7 +68,7 @@ const MovieCast = () => {
     <div className="min-h-screen bg-[#141414] text-white font-netflix">
       {/* Header */}
       <header className="px-4 md:px-12 py-6 bg-gradient-to-b from-black/80 to-transparent">
-        <h1 className="text-[#e50914] text-4xl md:text-5xl font-bold tracking-tight text-center">
+        <h1 className="text-[#e50914] text-4xl md:text-5xl font-bold tracking-normal text-center">
           CAST & CHARACTERS
         </h1>
       </header>
@@ -89,10 +89,10 @@ const MovieCast = () => {
                 />
               </CardHeader>
               <CardContent className="p-4">
-                <CardTitle className="text-white text-xl font-bold mb-2">
+                <CardTitle className="text-white text-xl tracking-wider font-bold mb-2">
                   {cast.name}
                 </CardTitle>
-                <p className="text-[#e50914] text-sm font-semibold mb-2">
+                <p className="text-[#e50914] text-sm font-semibold tracking-wider mb-2">
                   as {cast.role}
                 </p>
                 <p className="text-gray-300 text-sm leading-relaxed">

@@ -77,7 +77,7 @@ const Sidebar = ({ onClose }) => {
               textAlign: "center",
             }}
           >
-            Preview
+            Overview
           </Link>
         </div>
         <div></div>
