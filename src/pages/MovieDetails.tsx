@@ -38,23 +38,14 @@ const MovieDetails = () => {
             <CardTitle className="text-white text-3xl font-bold tracking-normal">
               About the Moviebook
             </CardTitle>
-            <CardDescription className="text-gray-300 text-base leading-relaxed mt-4" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700 }}>
-              The Andhadhun Moviebook brings one of India’s most unpredictable
-              thrillers to life through an immersive storytelling experience.
-              Rather than simply retelling the movie, it transforms the
-              narrative into a chapter-based journey — where each page unfolds
-              like a scene, complete with titles, visuals, and emotions that
-              mirror the film’s rhythm and suspense. This moviebook takes you
-              deep into Akash’s world — a pianist whose act of pretending to be
-              blind spirals into a chain of crime, chaos, and moral confusion.
-              Each section explores how perception, deception, and survival
-              intertwine, revealing the fine line between truth and illusion.
-              Through vivid writing and cinematic structure, it captures the
-              tension and irony that define Andhadhun’s storytelling. Designed
-              for film lovers and creative storytellers alike, the Andhadhun
-              Moviebook invites you to experience the film in a new form — one
-              where music becomes narrative, suspense turns into reflection, and
-              every page feels like a frame from the movie itself.
+            <CardDescription className="text-gray-300 text-base leading-relaxed mt-4" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700, whiteSpace: 'pre-line' }}>
+            {`
+🎬 Andhadhun Moviebook India ke sabse unpredictable thrillers me se ek ko ek naye, immersive style me zinda karti hai! ✨
+Har page ek 🎭 scene ki tarah unfold hota hai — full of titles, visuals aur emotions, bilkul movie ke rhythm aur suspense jaisa 🎥🔥
+
+🎹 Isme aap ghuste ho Akash ke world me — ek pianist jo andha banne ka natak karta hai 👁️, aur phir fas jaata hai crime, chaos aur confusion ke whirlpool me 😵‍💫💥
+Ek cinematic kahani jahan music story ban jaata hai, aur har page lagta hai jaise ek movie frame 🎞️❤️ — perfect treat for film lovers & storytellers ✍️✨
+            `}
             </CardDescription>
           </CardHeader>
         </Card>
