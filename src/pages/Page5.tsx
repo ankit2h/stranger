@@ -47,7 +47,7 @@ const Page5 = () => {
                 <CardTitle className="text-white text-2xl font-bold tracking-normal">
                   {card.title}
                 </CardTitle>
-                <CardDescription className="text-gray-400 text-base leading-relaxed mt-2">
+                <CardDescription className="text-gray-400 text-base leading-relaxed mt-2" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700 }}>
                   {card.description}
                 </CardDescription>
               </CardHeader>

@@ -38,7 +38,7 @@ const MovieDetails = () => {
             <CardTitle className="text-white text-3xl font-bold tracking-normal">
               About the Moviebook
             </CardTitle>
-            <CardDescription className="text-gray-300 text-base leading-relaxed mt-4">
+            <CardDescription className="text-gray-300 text-base leading-relaxed mt-4" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700 }}>
               The Andhadhun Moviebook brings one of India’s most unpredictable
               thrillers to life through an immersive storytelling experience.
               Rather than simply retelling the movie, it transforms the

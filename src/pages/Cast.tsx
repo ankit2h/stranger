@@ -95,7 +95,7 @@ const MovieCast = () => {
                 <p className="text-[#e50914] text-sm font-semibold tracking-wider mb-2">
                   as {cast.role}
                 </p>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700 }}>
                   {cast.intro}
                 </p>
               </CardContent>
