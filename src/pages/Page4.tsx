@@ -10,19 +10,19 @@ const Page4 = () => {
       id: 1,
       title: "A Dangerous Alliance",
       description: "Akash convinces the doctor’s wife to help him escape. They plot to use Simi’s greed against her, luring her into a deadly trap. But every alliance in this twisted story has hidden motives—trust is a luxury no one can afford.",
-      image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800&q=80"
+      image: "https://i.postimg.cc/x8rGfcTX/ai-generated-image-12.jpg"
     },
     {
       id: 2,
       title: "Death in the Shadows",
       description: "The confrontation spirals out of control. Simi fights back viciously, leading to a brutal chase and a crash that leaves her presumed dead. Akash, battered and broken, seizes his chance to flee the city. The music that once symbolized beauty and peace now becomes a haunting reminder of all he’s lost.",
-      image: "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?w=800&q=80"
+      image: "https://i.postimg.cc/25bB1rtT/ai-generated-image-13.jpg"
     },
     {
       id: 3,
       title: "The Blind Man’s Escape",
       description: "Akash’s journey takes him away from India, where he starts anew, performing for audiences who see him as a miraculous blind pianist. The irony is bitter—his talent shines brighter than ever, but it’s built on layers of guilt and deception.",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80"
+      image: "https://i.postimg.cc/J0613BDP/ai-generated-image-14.jpg"
     },
   ];
 

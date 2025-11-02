@@ -10,19 +10,19 @@ const Page3 = () => {
       id: 1,
       title: "Simi’s Suspicion",
       description: "Simi’s paranoia deepens. She begins to stalk Akash, visiting his apartment under the pretext of checking on him. Her eyes scan the room, searching for proof of sight. Akash tries to maintain his blind act, fumbling around and pretending ignorance. But a single misstep—a startled reaction to a movement—gives her reason to doubt.",
-      image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800&q=80"
+      image: "https://i.postimg.cc/KvpX029r/ai-generated-image-9.jpg"
     },
     {
       id: 2,
       title: "The Poisoned Offer",
       description: "Feigning kindness, Simi offers Akash a glass of poisoned tea. He drinks it, unaware of her plan. Soon, darkness consumes him—real this time. When he wakes up, he’s in an unfamiliar place, bound and helpless. For the first time, his blindness isn’t a choice; it’s survival against forces far beyond his control.",
-      image: "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?w=800&q=80"
+      image: "https://i.postimg.cc/SsSD0XRG/ai-generated-image-10.jpg"
     },
     {
       id: 3,
       title: "The Doctor’s Bargain",
       description: "Akash finds himself at the mercy of a corrupt doctor and his wife, who see him as an opportunity to make money by selling his organs. The doctor’s wife, however, takes pity on him, moved by his story and innocence. Together, they strike a deal that leads to a new cycle of manipulation, deceit, and survival.",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80"
+      image: "https://i.postimg.cc/0jLYNrkF/ai-generated-image-11.jpg"
     },
   ];
 

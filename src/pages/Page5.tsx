@@ -10,19 +10,19 @@ const Page5 = () => {
       id: 1,
       title: "Reunion at a Distance",
       description: "Years later, Sophie sees Akash performing at a concert abroad. Time has changed them both, but her curiosity hasn’t faded. She approaches him, unsure whether to forgive or question the man she once loved.",
-      image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800&q=80"
+      image: "https://i.postimg.cc/bN4PzPQG/ai-generated-image-15.jpg"
     },
     {
       id: 2,
       title: "Truth or Illusion",
       description: "As they talk, Sophie senses that Akash might still be hiding something. When he walks away, she notices a subtle movement—his cane lightly flicks a can out of his path, perfectly timed, perfectly aimed. Was it reflex or instinct?",
-      image: "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?w=800&q=80"
+      image: "https://i.postimg.cc/Ss15DLdn/ai-generated-image-16.jpg"
     },
     {
       id: 3,
       title: "The Curtain Falls",
       description: "Sophie stands frozen as Akash disappears into the crowd. The truth remains ambiguous—was he ever blind, or was blindness his greatest performance? The story ends with the haunting sound of a piano note echoing in the distance, leaving the audience questioning everything they just witnessed.",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80"
+      image: "https://i.postimg.cc/59h1J150/ai-generated-image-17.jpg"
     },
   ];
 

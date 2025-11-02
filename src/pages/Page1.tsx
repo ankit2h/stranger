@@ -10,19 +10,19 @@ const Page1 = () => {
       id: 1,
       title: "Music in the Dark",
       description: "Akash, a passionate pianist living in Pune, leads a quiet life centered around his piano and his art. But his blindness is not real—it’s a self-imposed condition. Believing that shutting off one sense sharpens the others, he pretends to be blind to heighten his musical instincts. He practices daily, moving confidently through his apartment, every step rehearsed, every sound memorized. His melodies echo through his small room, expressing emotions he cannot otherwise share.",
-      image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800&q=80"
+      image: "https://i.postimg.cc/SsYbMtLj/ai-generated-image-3.jpg"
     },
     {
       id: 2,
       title: "Sophie’s Discovery",
       description: "One afternoon, Akash’s mesmerizing performance catches the attention of Sophie, the warm-hearted daughter of a café owner. Impressed by his soulful tunes, she invites him to perform regularly at her family’s café. Their friendship soon turns into affection, and Sophie becomes both his admirer and confidante. Unaware of his secret, she sees him as an inspiring artist who overcame blindness to pursue his dream.",
-      image: "https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?w=800&q=80"
+      image: "https://i.postimg.cc/85QtZKQt/ai-generated-image-4.jpg"
     },
     {
       id: 3,
       title: "The Invitation",
       description: "Fate intervenes when former Bollywood actor Pramod Sinha visits the café and is enchanted by Akash’s music. He invites Akash to play at his home for his wife, Simi. It seems like a golden opportunity for Akash, unaware that this invitation will change his life forever.",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80"
+      image: "https://i.postimg.cc/d15Zh3BR/ai-generated-image-5.jpg"
     },
   ];
 
