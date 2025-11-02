@@ -15,7 +15,7 @@ const Page5 = () => {
     {
       id: 1,
       title: "Reunion at a Distance",
-      description: `🎤 Saalon baad, **Sophie** ek concert me abroad Akash ko perform karte hue dekhti hai 🌍🎶
+      description: `🎤 Saalon baad, Sophie ek concert me abroad Akash ko perform karte hue dekhti hai 🌍🎶
 Waqt ne dono ko badal diya hai, par uski curiosity ab bhi zinda hai 💫💭
 
 Wo Akash ke paas jaati hai, dil me confusion le kar —
@@ -26,7 +26,7 @@ kya use maaf kare ❤️‍🩹 ya usse sawaal pooche jise wo kabhi pyaar karti 
     {
       id: 2,
       title: "Truth or Illusion",
-      description: `🗣️ Jab dono baat karte hain, **Sophie** ko mehsoos hota hai ki Akash ab bhi kuch chhupa raha hai 🤔💭
+      description: `🗣️ Jab dono baat karte hain, Sophie ko mehsoos hota hai ki Akash ab bhi kuch chhupa raha hai 🤔💭
 Jab wo chal kar jaata hai, Sophie ki nazar ek chhoti si cheez par padti hai 👀
 
 Akash ka stick halki si move hoti hai aur ek can ko side kar deti hai — bilkul perfect timing me 🎯😳

@@ -16,7 +16,7 @@ const Page4 = () => {
       id: 1,
       title: "A Dangerous Alliance",
       description: `🧠 Akash doctor ki wife ko samjhata hai ki wo uski madad kare bhaagne me 🤝💨
-Dono milkar ek plan banate hain — **Simi** ki greed ka use karke usse ek deadly trap me phansaane ka 💰⚡
+Dono milkar ek plan banate hain — Simi ki greed ka use karke usse ek deadly trap me phansaane ka 💰⚡
 
 Lekin is khatarnaak kahani me har alliance ke peeche ek hidden motive hota hai 😈🎭
 Yahan trust ek luxury hai — jise koi afford nahi kar sakta 😶🔐
@@ -40,11 +40,11 @@ Ab wahi uske dard aur khoyi hui zindagi ki yaad ban jaata hai 🎵😢
       id: 3,
       title: "The Blind Man’s Escape",
       description: `🌍 Akash India chhod kar ek nayi jagah apni zindagi shuru karta hai ✈️🎶
-Ab wo audiences ke liye perform karta hai jo use ek *miraculous blind pianist* ke roop me dekhte hain 👏🎹
+Ab wo audiences ke liye perform karta hai jo use ek miraculous blind pianist ke roop me dekhte hain 👏🎹
 
 Par zindagi ka irony kadwa hai 😔💭
 Uska talent ab pehle se zyada chamak raha hai ✨
-Lekin wo bana hai **guilt aur dhokhe** ke upar 😢🎭
+Lekin wo bana hai guilt aur dhokhe ke upar 😢🎭
 `,
       image: "https://i.postimg.cc/J0613BDP/ai-generated-image-14.jpg",
     },
