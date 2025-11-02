@@ -9,19 +9,42 @@ const Page1 = () => {
     {
       id: 1,
       title: "Music in the Dark",
-      description: "Akash, a passionate pianist living in Pune, leads a quiet life centered around his piano and his art. But his blindness is not real—it’s a self-imposed condition. Believing that shutting off one sense sharpens the others, he pretends to be blind to heighten his musical instincts. He practices daily, moving confidently through his apartment, every step rehearsed, every sound memorized. His melodies echo through his small room, expressing emotions he cannot otherwise share.",
+    description: `🎹 Akash ek passionate pianist hai jo Pune me rehta hai 🎶
+  Uska life uske piano aur music ke around hi ghoomta hai 🏡💫
+  Lekin uski andhapan sach nahi hai 😮 — ye uska khud ka decision hai!
+  Uska maanna hai ki ek sense band karne se doosri senses aur tez ho jaati hain 👀✨
+  Isliye wo pretend karta hai ki wo andha hai, taaki apne music instincts ko aur strong bana sake 🎵💪
+
+Wo roz practice karta hai, apne ghar me confidently move karta hai 🚶‍♂️
+Har kadam, har sound use yaad hai 🔊🧠
+Uske piano ke sur uske emotions ko express karte hain — jo wo shabdon me nahi keh paata ❤️🎼`,
       image: "https://i.postimg.cc/SsYbMtLj/ai-generated-image-3.jpg"
     },
     {
       id: 2,
       title: "Sophie’s Discovery",
-      description: "One afternoon, Akash’s mesmerizing performance catches the attention of Sophie, the warm-hearted daughter of a café owner. Impressed by his soulful tunes, she invites him to perform regularly at her family’s café. Their friendship soon turns into affection, and Sophie becomes both his admirer and confidante. Unaware of his secret, she sees him as an inspiring artist who overcame blindness to pursue his dream.",
+      description: `☀️ Ek din dopahar ko, Akash ka magical performance sabka dil jeet leta hai 🎹💫
+Wahi pe usse milti hai Sophie — ek sweet aur kind-hearted ladki, jiske papa ek café chalate hain ☕💖
+
+Uske soulful music se impress hokar, Sophie use apne café me regular perform karne ka invite deti hai 🎶✨
+Dheere-dheere unki dosti pyaar me badalne lagti hai ❤️
+Sophie Akash ki biggest fan aur close dost ban jaati hai 🤗💞
+
+Wo ye nahi jaanti ki Akash ki andhapan sirf ek secret hai 😮
+Uske liye, Akash ek inspiring artist hai jisne apni blindness ke bawajood apne sapne pure kiye 🌟🎵
+`,
       image: "https://i.postimg.cc/85QtZKQt/ai-generated-image-4.jpg"
     },
     {
       id: 3,
       title: "The Invitation",
-      description: "Fate intervenes when former Bollywood actor Pramod Sinha visits the café and is enchanted by Akash’s music. He invites Akash to play at his home for his wife, Simi. It seems like a golden opportunity for Akash, unaware that this invitation will change his life forever.",
+      description: `🎬 Kismet tab beech me aati hai jab ek purane Bollywood actor, Pramod Sinha, café me aate hain 🎩✨
+Wahan wo Akash ka music sunte hi uske deewane ho jaate hain 🎹💖
+
+Wo Akash ko apne ghar bulate hain taaki wo unki wife, Simi, ke liye bajaye 🎶💃
+Akash ke liye ye ek golden chance lagta hai 🌟
+Lekin use ye bilkul pata nahi hota ki ye invitation uski zindagi hamesha ke liye badal dega 😮⚡
+`,
       image: "https://i.postimg.cc/d15Zh3BR/ai-generated-image-5.jpg"
     },
   ];
@@ -47,7 +70,7 @@ const Page1 = () => {
                 <CardTitle className="text-white text-2xl font-bold tracking-normal">
                   {card.title}
                 </CardTitle>
-                <CardDescription className="text-gray-400 text-base leading-relaxed mt-2" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700 }}>
+                <CardDescription className="text-gray-400 text-base leading-relaxed mt-2" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700, whiteSpace: 'pre-line' }}>
                   {card.description}
                 </CardDescription>
               </CardHeader>
