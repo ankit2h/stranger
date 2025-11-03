@@ -8,8 +8,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Page3 = () => {
+  const FLOAT_BUTTON_LABEL = "Next";
+
   const navigate = useNavigate();
   const cards = [
     {
@@ -97,6 +100,15 @@ Wo dono milkar ek deal karte hain, jo shuru karti hai ek naye daur ka — dhokhe
             </Card>
           ))}
         </div>
+        <Link
+          to={`/the-symphony-of-lies`}
+          aria-label={FLOAT_BUTTON_LABEL}
+          title={FLOAT_BUTTON_LABEL}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 bg-[#e50914] hover:bg-[#e50914] text-white px-5 py-3 rounded-xl shadow-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-300 tracking-widest"
+        >
+          Next 👉
+        </Link>
       </main>
     </div>
   );

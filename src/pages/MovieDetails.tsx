@@ -5,8 +5,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+
 
 const MovieDetails = () => {
+  const FLOAT_BUTTON_LABEL = "Next";
   return (
     <div className="min-h-screen bg-[#141414] text-white font-netflix">
       {/* Header */}
@@ -50,6 +53,14 @@ Ek cinematic kahani jahan music story ban jaata hai, aur har page lagta hai jais
           </CardHeader>
         </Card>
       </main>
+      <Link to={`/the-melodic-illusion`}
+        aria-label={FLOAT_BUTTON_LABEL}
+        title={FLOAT_BUTTON_LABEL}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 z-50 bg-[#e50914] hover:bg-[#e50914] text-white px-5 py-3 rounded-xl shadow-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-300 tracking-widest"
+      >
+        Next 👉
+      </Link>
     </div>
   );
 };

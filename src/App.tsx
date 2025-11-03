@@ -61,7 +61,7 @@ const App = () => {
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
               <Route
-                path="/The-corpse-behind-the-curtain"
+                path="/the-corpse-behind-the-curtain"
                 element={
                   <>
                     <SignedIn>

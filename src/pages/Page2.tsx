@@ -8,8 +8,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const Page2 = () => {
+    const FLOAT_BUTTON_LABEL = "Next";
+
   const navigate = useNavigate();
   const cards = [
     {
@@ -30,8 +34,7 @@ Lekin wo acting karta hai jaise usne kuch dekha hi nahi, aur piano bajata rehta 
     {
       id: 2,
       title: "The Panic of Pretence",
-      description:
-        `😨 Akash mushkil se apna composure banaye rakhta hai, jab Simi uske paas se guzar kar use test karti hai — kya wo sach me andha hai ya nahi 👀💔
+      description: `😨 Akash mushkil se apna composure banaye rakhta hai, jab Simi uske paas se guzar kar use test karti hai — kya wo sach me andha hai ya nahi 👀💔
 
 Har second use ek ghante jaisa lagta hai ⏳😰
 Ab uske piano ke sur darr ki dhadkan jaise lagte hain 🎹💓
@@ -45,8 +48,7 @@ Lekin chup rehna matlab ek aisa secret uthana, jo dil pe bojh ban jaaye 😔🤫
     {
       id: 3,
       title: "The Cover-Up",
-      description:
-        `🏃‍♂️💨 Mushkil se Sinha House se bachkar nikalne ke baad, Akash shock me apne ghar lautta hai 😰🏠
+      description: `🏃‍♂️💨 Mushkil se Sinha House se bachkar nikalne ke baad, Akash shock me apne ghar lautta hai 😰🏠
 Wo sochta hai sab kuch confess kar de, lekin fir dar jaata hai — kaun maanega ek “andhe” aadmi ki baat jo murder ka witness hone ka claim kare 😔🕵️‍♂️
 
 Wo koshish karta hai sab bhoolne ki, par kahani yahan khatam nahi hoti 😬
@@ -80,7 +82,11 @@ Aur yahi se shuru hoti hai ek deadly confrontation ki taiyaari ⚡🎭
                 </CardTitle>
                 <CardDescription
                   className="text-gray-400 text-base leading-relaxed mt-2"
-                  style={{ fontFamily: "Lora, sans-serif", fontWeight: 700, whiteSpace: 'pre-line' }}
+                  style={{
+                    fontFamily: "Lora, sans-serif",
+                    fontWeight: 700,
+                    whiteSpace: "pre-line",
+                  }}
                 >
                   {card.description}
                 </CardDescription>
@@ -99,6 +105,15 @@ Aur yahi se shuru hoti hai ek deadly confrontation ki taiyaari ⚡🎭
           ))}
         </div>
       </main>
+      <Link
+        to={`/the-game-of-deception`}
+        aria-label={FLOAT_BUTTON_LABEL}
+        title={FLOAT_BUTTON_LABEL}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 z-50 bg-[#e50914] hover:bg-[#e50914] text-white px-5 py-3 rounded-xl shadow-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-300 tracking-widest"
+      >
+        Next 👉
+      </Link>
     </div>
   );
 };
