@@ -13,7 +13,6 @@ import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
 import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
-
 import MovieDetails from "./pages/MovieDetails";
 import MovieCast from "./pages/Cast";
 import {
@@ -21,6 +20,7 @@ import {
   SignedOut,
   RedirectToSignIn,
   ClerkProvider,
+  SignIn,
 } from "@clerk/clerk-react";
 
 const queryClient = new QueryClient();
@@ -90,7 +90,7 @@ const App = () => {
                   </>
                 }
               />
-               <Route
+              <Route
                 path="/the-symphony-of-lies"
                 element={
                   <>
@@ -105,7 +105,7 @@ const App = () => {
                   </>
                 }
               />
-               <Route
+              <Route
                 path="/the-final-note"
                 element={
                   <>
@@ -120,7 +120,7 @@ const App = () => {
                   </>
                 }
               />
-               <Route
+              <Route
                 path="/the-melodic-illusion"
                 element={
                   <>

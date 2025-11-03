@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const MovieDetails = () => {
   const FLOAT_BUTTON_LABEL = "Next";
+
   return (
     <div className="min-h-screen bg-[#141414] text-white font-netflix">
       {/* Header */}
@@ -41,8 +42,15 @@ const MovieDetails = () => {
             <CardTitle className="text-white text-3xl font-bold tracking-normal">
               About the Moviebook
             </CardTitle>
-            <CardDescription className="text-gray-300 text-base leading-relaxed mt-4" style={{ fontFamily: 'Lora, sans-serif', fontWeight: 700, whiteSpace: 'pre-line' }}>
-            {`
+            <CardDescription
+              className="text-gray-300 text-base leading-relaxed mt-4"
+              style={{
+                fontFamily: "Lora, sans-serif",
+                fontWeight: 700,
+                whiteSpace: "pre-line",
+              }}
+            >
+              {`
 🎬 Andhadhun Moviebook India ke sabse unpredictable thrillers me se ek ko ek naye, immersive style me zinda karti hai! ✨
 Har page ek 🎭 scene ki tarah unfold hota hai — full of titles, visuals aur emotions, bilkul movie ke rhythm aur suspense jaisa 🎥🔥
 
@@ -53,10 +61,11 @@ Ek cinematic kahani jahan music story ban jaata hai, aur har page lagta hai jais
           </CardHeader>
         </Card>
       </main>
-      <Link to={`/the-melodic-illusion`}
+      <Link
+        to={`/the-melodic-illusion`}
         aria-label={FLOAT_BUTTON_LABEL}
         title={FLOAT_BUTTON_LABEL}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-6 right-6 z-50 bg-[#e50914] hover:bg-[#e50914] text-white px-5 py-3 rounded-xl shadow-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-300 tracking-widest"
       >
         Next 👉
