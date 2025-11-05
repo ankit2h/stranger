@@ -17,7 +17,7 @@ import { ClerkProvider } from "@clerk/clerk-react";
 const persistor = persistStore(store);
 
 // Vite: put this in .env as VITE_CLERK_PUBLISHABLE_KEY=pk_test_xxx
-const pk = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string | "pk_live_Y2xlcmsubGVhcm5lc3QudGVjaCQ";
+const pk = "pk_live_Y2xlcmsubGVhcm5lc3QudGVjaCQ";
 if (!pk) {
   // fail fast so you don't get "Missing required parameter: client_id"
   throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY in .env");
