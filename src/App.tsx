@@ -27,7 +27,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const PUBLISHABLE_KEY =
-    "pk_test_c2luZ3VsYXItYW5lbW9uZS04MS5jbGVyay5hY2NvdW50cy5kZXYk";
+    "pk_live_Y2xlcmsubGVhcm5lc3QudGVjaCQ";
 
   if (!PUBLISHABLE_KEY) {
     throw new Error("Add your Clerk Publishable Key to the .env file");
