@@ -88,9 +88,14 @@ const App: React.FC = () => {
               element={<SignUp routing="path" path="/sign-up" />}
             />
 
-            {/* Public route */}
-            <Route path="/" element={<MovieDetails />} />
-
+            <Route
+              path="/"
+              element={
+                <Protected>
+                  <MovieDetails />
+                </Protected>
+              }
+            />
             {/* Protected routes */}
             <Route
               path="/the-melodic-illusion"
@@ -140,7 +145,6 @@ const App: React.FC = () => {
                 </Protected>
               }
             />
-
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
           </Routes>
